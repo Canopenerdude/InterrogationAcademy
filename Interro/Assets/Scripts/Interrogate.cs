@@ -16,11 +16,28 @@ public class Interrogate : MonoBehaviour
         
     }
 
+    public bool rockCollided;
+    public bool lampCollided;
+    public bool carCollided;
+
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Rock1")
+        while (collision.gameObject.name == "Rock1")
         {
-            Debug.Log("This is a line!");
+            Debug.Log("This is a first line!");
+            rockCollided = true;
+        }
+
+        while (collision.gameObject.name == "Lamp1")
+        {
+            Debug.Log("This is a second line!");
+            lampCollided = true;
+        }
+
+        while (collision.gameObject.name == "Car1")
+        {
+            Debug.Log("This is a third line!");
+            carCollided = true;
         }
     }
 }
