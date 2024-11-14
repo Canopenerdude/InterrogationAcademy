@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LastPosition
   - canPickup
+  - canPress
   layers:
   - Default
   - TransparentFX
