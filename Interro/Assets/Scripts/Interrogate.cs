@@ -1,55 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Interrogate : MonoBehaviour
 {
-    public AudioSource rockLine; //Audio line for rock1
-    public AudioSource lampLine; //Audio line for lamp1
-    public AudioSource carLine; //Audio line for car1
-    public AudioSource angyLine; //Audio line when patience >= 10
+    private AudioSource q1Line; //Audio line for q1
+    public AudioSource q2Line; //Audio line for q2
+    public AudioSource q3Line; //Audio line for q3
+    public AudioSource angyLine; //Audio line when patience >= 6
 
-    private int patience; //Interviewee's patience; if >= '10', a different line will play
+    private int patience; //Interviewee's patience; if >= '6', a different line will play
     
-    public bool rockCollided; //did the rock collide?
-    public bool lampCollided; //did the lamp collide?
-    public bool carCollided; //did the car collide?
-    public GameObject Rock; //the rock that did the colliding
-    public GameObject Lamp; //the lamp that did the colliding
-    public GameObject Car; //the car that did the colliding
+    public bool q1Collided; //did the q1 collide?
+    public bool q2Collided; //did the q2 collide?
+    public bool q3Collided; //did the q3 collide?
+    public GameObject q1; //the q1 that did the colliding
+    public GameObject q2; //the q2 that did the colliding
+    public GameObject q3; //the q3 that did the colliding
     
     // Start is called before the first frame update
     void Start()
     {
         //Grabbing the audio lines for the objects
-        rockLine = GetComponent<AudioSource>();
-        lampLine = GameObject.Find("LampLine").GetComponent<AudioSource>();
-        carLine = GameObject.Find("CarLine").GetComponent<AudioSource>();
+        q1Line = GetComponent<AudioSource>();
+        q2Line = GameObject.Find("q2Line").GetComponent<AudioSource>();
+        q3Line = GameObject.Find("q3Line").GetComponent<AudioSource>();
         angyLine = GameObject.Find("Angy").GetComponent<AudioSource>();
-        Rock = GameObject.Find("Rock1");
-        Lamp = GameObject.Find("Lamp1");
-        Car = GameObject.Find("Car1");
+        q1 = GameObject.Find("q1");
+        q2 = GameObject.Find("q2");
+        q3 = GameObject.Find("q3");
     }
 
     // Update is called once per frame
     void Update()
     {
         //These ifs make sure the audio lines only trigger once, and increment the patience
-        if (rockCollided)
+        if (q1Collided)
         {
-            rockCollided = false;
+            q1Collided = false;
             patience++;
         }
 
-        if (lampCollided)
+        if (q2Collided)
         {
-            lampCollided = false;
+            q2Collided = false;
             patience++;
         }
 
-        if (carCollided)
+        if (q3Collided)
         {
-            carCollided = false;
+            q3Collided = false;
             patience++;
         }
     }
@@ -57,63 +58,63 @@ public class Interrogate : MonoBehaviour
     IEnumerator OnCollisionEnter(Collision collision)
     {
         //If an object with the name 'x' enters the collision, play the corresponding line, wait three seconds, and then despawn the object
-        if (collision.gameObject.name == "Rock1")
+        if (collision.gameObject.name == "q1")
         {
-            if (patience >= 10)
+            if (patience >= 6)
             {
                 Debug.Log("Angy Line!");
                 angyLine.Play(0);
-                yield return new WaitForSeconds(3);
-                rockCollided = true;
-                Rock.SetActive(false);
+                yield return new WaitForSeconds(angyLine.clip.length);
+                q1Collided = true;
+                q1.SetActive(false);
             }
             else
             {
                 Debug.Log("This is a first line!");
-                rockLine.Play(0);
-                yield return new WaitForSeconds(3);
-                rockCollided = true;
-                Rock.SetActive(false);
+                q1Line.Play(0);
+                yield return new WaitForSeconds(q1Line.clip.length);
+                q1Collided = true;
+                q1.SetActive(false);
             }
         }
 
-        else if (collision.gameObject.name == "Lamp1")
+        else if (collision.gameObject.name == "q2")
         {
-            if (patience >= 10)
+            if (patience >= 6)
             {
                 Debug.Log("Angy Line!");
                 angyLine.Play(0);
-                yield return new WaitForSeconds(3);
-                lampCollided = true;
-                Lamp.SetActive(false);
+                yield return new WaitForSeconds(angyLine.clip.length);
+                q2Collided = true;
+                q2.SetActive(false);
             }
             else
             {
                 Debug.Log("This is a second line!");
-                lampLine.Play(0);
-                yield return new WaitForSeconds(3);
-                lampCollided = true;
-                Lamp.SetActive(false);
+                q2Line.Play(0);
+                yield return new WaitForSeconds(q2Line.clip.length);
+                q2Collided = true;
+                q2.SetActive(false);
             }
         }
 
-        else if (collision.gameObject.name == "Car1")
+        else if (collision.gameObject.name == "q3")
         {
-            if (patience >= 10)
+            if (patience >= 6)
             {
                 Debug.Log("Angy Line!");
                 angyLine.Play(0);
-                yield return new WaitForSeconds(3);
-                carCollided = true;
-                Car.SetActive(false);
+                yield return new WaitForSeconds(angyLine.clip.length);
+                q3Collided = true;
+                q3.SetActive(false);
             }
             else
             {
                 Debug.Log("This is a third line!");
-                carLine.Play(0);
-                yield return new WaitForSeconds(3);
-                carCollided = true;
-                Car.SetActive(false);
+                q3Line.Play(0);
+                yield return new WaitForSeconds(q3Line.clip.length);
+                q3Collided = true;
+                q3.SetActive(false);
             }
         }
     }

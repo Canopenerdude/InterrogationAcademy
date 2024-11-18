@@ -15,7 +15,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         mainCamera = Camera.main.transform;
         button = transform.parent;
-        worldSpaceCanvas = GameObject.Find("WorldSpaceCanvas").transform;
+        worldSpaceCanvas = GameObject.Find("ResetText").transform;
         
         transform.SetParent(worldSpaceCanvas);
     }

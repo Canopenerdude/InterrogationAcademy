@@ -5,31 +5,31 @@ using UnityEngine;
 
 public class Press : MonoBehaviour
 {
-    private GameObject rock;
-    private GameObject lamp;
-    private GameObject car;
+    private GameObject q1;
+    private GameObject q2;
+    private GameObject q3;
     
-    private Vector3 rockPos;
-    private Vector3 lampPos;
-    private Vector3 carPos;
+    private Vector3 q1Pos;
+    private Vector3 q2Pos;
+    private Vector3 q3Pos;
 
     void Start()
     {
-        rock = GameObject.Find("Rock1");
-        lamp = GameObject.Find("Lamp1");
-        car = GameObject.Find("Car1");
-        rockPos = rock.transform.position;
-        lampPos = lamp.transform.position;
-        carPos = car.transform.position;
+        q1 = GameObject.Find("q1");
+        q2 = GameObject.Find("q2");
+        q3 = GameObject.Find("q3");
+        q1Pos = q1.transform.position;
+        q2Pos = q2.transform.position;
+        q3Pos = q3.transform.position;
     }
     private void OnMouseUpAsButton()
     {
         Debug.Log("Press as button");
-        rock.SetActive(true);
-        rock.transform.position = rockPos;
-        lamp.SetActive(true);
-        lamp.transform.position = lampPos;
-        car.SetActive(true);
-        car.transform.position = carPos;
+        q1.SetActive(true);
+        q1.transform.position = q1Pos;
+        q2.SetActive(true);
+        q2.transform.position = q2Pos;
+        q3.SetActive(true);
+        q3.transform.position = q3Pos;
     }
 }
