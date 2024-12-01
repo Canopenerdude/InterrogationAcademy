@@ -8,14 +8,26 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/defunct/Test.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/InterroRoom.unity
     guid: 08c9fd0b0900ac04280f909cf0f831eb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/defunct/Incorrect.unity
     guid: d4bf13cd1f61ed84cb8aecd7687c4676
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/defunct/Correct.unity
     guid: 46718245eb9ad174dae3d636a9aaf567
+  - enabled: 1
+    path: Assets/Prefabs/Police Station/Scene/Police Station Scene.unity
+    guid: 8124e5870f4fd4c779e7a5f994e84ad1
+  - enabled: 1
+    path: Assets/Scenes/SaulInterroRoom.unity
+    guid: 8bf425ea1a432954b8e035e31ced1afb
+  - enabled: 1
+    path: Assets/Scenes/BrianInterroRoom.unity
+    guid: 5b2312d369b46d244b81d28be7c7be6f
+  - enabled: 1
+    path: Assets/Scenes/DanInterroRoom.unity
+    guid: c9334d7826b4a384c96c26921f335bb9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8f350c87e79ccc349922452e5b867ffd, type: 2}
