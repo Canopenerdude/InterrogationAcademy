@@ -22,6 +22,7 @@ public class FirstPersonMove : MonoBehaviour {
 	void Start()
 	{
 		anim = GetComponent<CharacterAnimation>(); // Get the animation script
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// FixedUpdate is used for physics based movement
@@ -33,10 +34,6 @@ public class FirstPersonMove : MonoBehaviour {
 		PlayerMove(horizontal,vertical); // Call the move player function sending horizontal and vertical movements
 		Jump(); // Call the Jump function! Woot!
 		//Press the space bar to apply no locking to the Cursor
-		if (Input.GetKey(KeyCode.Space))
-		{
-			Cursor.lockState = CursorLockMode.Locked;
-		}
 	}
 	
 	private void MouseLook()

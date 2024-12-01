@@ -27,7 +27,7 @@ public class Pickup : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) //change E to whichever key you want to press to pick up
+        if (Input.GetMouseButtonDown(0)) 
         {
             if (heldObj == null) //if currently not holding anything
             {
