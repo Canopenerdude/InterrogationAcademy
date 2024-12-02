@@ -2899,30 +2899,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800f892cfeb67734cb644d77ae9605a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  q1B: {fileID: 0}
-  q2B: {fileID: 0}
-  q3B: {fileID: 0}
-  q4B: {fileID: 0}
-  q5B: {fileID: 0}
-  q6B: {fileID: 0}
-  q1S: {fileID: 0}
-  q2S: {fileID: 0}
-  q3S: {fileID: 0}
-  q4S: {fileID: 0}
-  q5S: {fileID: 0}
-  q6S: {fileID: 0}
-  q1D: {fileID: 0}
-  q2D: {fileID: 0}
-  q3D: {fileID: 0}
-  q4D: {fileID: 0}
-  q5D: {fileID: 0}
-  q6D: {fileID: 0}
-  angyB: {fileID: 0}
-  angyS: {fileID: 0}
-  angyD: {fileID: 0}
-  introB: {fileID: 0}
-  introS: {fileID: 0}
-  introD: {fileID: 0}
+  q1B: {fileID: 8300000, guid: 4ef98f6a40af86c48a40ea8afd580a2f, type: 3}
+  q2B: {fileID: 8300000, guid: c11b718c296436245ada4ead44747d78, type: 3}
+  q3B: {fileID: 8300000, guid: ce9415ab4aa7e014d935106efde54b2a, type: 3}
+  q4B: {fileID: 8300000, guid: 6ade9291106b8bf42a24d877b4902904, type: 3}
+  q5B: {fileID: 8300000, guid: 82e523cd9f5368c49b608975095ad330, type: 3}
+  q6B: {fileID: 8300000, guid: 85e8e03e004608241a850e7dcb785aa4, type: 3}
+  q1S: {fileID: 8300000, guid: 8a5637e642713764788c4c3ae2a00e10, type: 3}
+  q2S: {fileID: 8300000, guid: 5d53ae08a368ccf4292f074b74cff49a, type: 3}
+  q3S: {fileID: 8300000, guid: ae092615bf7bdf942ae68d38dd0f0cc1, type: 3}
+  q4S: {fileID: 8300000, guid: c90b41c9bedced642a8b14a4c3fb9b77, type: 3}
+  q5S: {fileID: 8300000, guid: c94f2f70a48306f40ba0f58285caad56, type: 3}
+  q6S: {fileID: 8300000, guid: 183ceea4ad80c7f44a8791e88c96a743, type: 3}
+  q1D: {fileID: 8300000, guid: 67ede2f3ff4a3e247b9c6c4d4e682b1b, type: 3}
+  q2D: {fileID: 8300000, guid: ef7afa3ffaa12c142b201ac370c9d63d, type: 3}
+  q3D: {fileID: 8300000, guid: 06d6b7b678ca1de49aade76cdf094b07, type: 3}
+  q4D: {fileID: 8300000, guid: 06c074f90e42f3949889cebb14d3fdd2, type: 3}
+  q5D: {fileID: 8300000, guid: 745a0df9f54147e44aa99ebf55a200a6, type: 3}
+  q6D: {fileID: 8300000, guid: 494d2e9788fe0334598dbe72c079ea1f, type: 3}
+  angyB: {fileID: 8300000, guid: 0ddb0640d415828458a4c9c1a640009d, type: 3}
+  angyS: {fileID: 8300000, guid: 1d9b1c997ad83eb4cadb19336101d4f0, type: 3}
+  angyD: {fileID: 8300000, guid: 0b33718065762824e9c58bc5ee0c8ed3, type: 3}
+  introB: {fileID: 8300000, guid: 56fa853881c5045458aa8b28b2d02d6d, type: 3}
+  introS: {fileID: 8300000, guid: 4b11b9a898e18cf4e9cf7ad1002d9aa0, type: 3}
+  introD: {fileID: 8300000, guid: da26fafe928cb2d4fa4d086b73d7cb2c, type: 3}
   q1Collided: 0
   q2Collided: 0
   q3Collided: 0
